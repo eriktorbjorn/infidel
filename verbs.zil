@@ -251,8 +251,8 @@ long description (fdesc or ldesc), otherwise will print short."
 	 <V-SCORE>
 	 <QUIT>>
 
-<ROUTINE V-QUIT ("OPTIONAL" (ASK? T) "AUX" SCOR)
-	 #DECL ((ASK?) <OR ATOM <PRIMTYPE LIST>> (SCOR) FIX)
+<ROUTINE V-QUIT ("OPTIONAL" (ASK? T))
+	 #DECL ((ASK?) <OR ATOM <PRIMTYPE LIST>>)
 	 <V-SCORE>
 	 <COND (<OR <AND .ASK?
 			 <TELL
@@ -510,8 +510,8 @@ wisdom, tempered by experience." CR>)>
 
 <GLOBAL FUMBLE-NUMBER 7>
 
-<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT OBJ TEMP)
-	 #DECL ((VB) <OR ATOM FALSE> (CNT) FIX (OBJ) OBJECT)
+<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT)
+	 #DECL ((VB) <OR ATOM FALSE> (CNT) FIX)
 	 <COND (<NOT <FSET? ,PRSO ,TAKEBIT>>
 		<COND (.VB
 		       <TELL <PICK-ONE ,YUKS> CR>)>
@@ -926,8 +926,7 @@ bursts into flames, burning your fingertips." CR>
 		      D ,PRSO "." CR>)>
 	 <RFATAL>>
 
-<ROUTINE V-BOARD ("OPTIONAL" OBJ "AUX" AV)
-	 #DECL ((AV) OBJECT)
+<ROUTINE V-BOARD ()
 	 <TELL "You are now ">
 	 <COND (<EQUAL? ,PRSO ,ALTAR>
 		<TELL "on">)
@@ -2014,7 +2013,7 @@ surrounding sand. The walls look very unstable.">>
 	 <VOWEL? ,PRSO>
 	 <TELL D ,PRSO "." CR>>
 
-<ROUTINE V-COUNT ("AUX" OBJS CNT)
+<ROUTINE V-COUNT ("AUX" CNT)
 	 <COND (<==? ,PRSO ,STONES>
 		<TELL 
 "There are a lot of stones in the pyramid (about 90,000,000 cubic feet)." CR>)
@@ -2149,7 +2148,7 @@ you kill yourself, just as he would have done!" CR>
 <ROUTINE V-SPIN ()
 	 <TELL "You can't spin that!" CR>>
 
-<ROUTINE V-THROUGH ("AUX" M)
+<ROUTINE V-THROUGH ()
 	<COND (<FSET? ,PRSO ,DOORBIT>
 	       <DO-WALK <OTHER-SIDE ,PRSO>>
 	       <RTRUE>)
