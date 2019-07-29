@@ -1879,7 +1879,7 @@ surrounding sand. The walls look very unstable.">>
 
 <ROUTINE V-SWIM ()
 	 <COND (<EQUAL? ,HERE ,RIVER-BANK>
-		<JIGS-UP .CROC-STR>
+		<JIGS-UP ,CROC-STR>
 		<RFATAL>)
 	       (<NOT <EQUAL? ,PRSO ,NILE-RIBBAH>>
 		<TELL "Now that's a cute idea. Maybe I'll try it next century."
