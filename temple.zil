@@ -123,8 +123,7 @@ is another doorway leading out to the east.")
 "You are in a small alcove off the Golden Room. Sitting in the middle of this
 small room is a roughly-hewn slab of granite, much like a legless table.")
       (OUT TO GOLDEN-ROOM)
-      (NORTH TO GOLDEN-ROOM)
-      (GLOBAL TABLE)>
+      (NORTH TO GOLDEN-ROOM)>
 
 <ROOM SILVER-ROOM
       (IN ROOMS)
@@ -148,8 +147,7 @@ another doorway leads into a smaller room to the south.")
 "You are in a small alcove off the Silver Room. Sitting in the middle of this
 small room is a roughly-hewn slab of granite, much like a legless table.")
       (OUT TO SILVER-ROOM)
-      (NORTH TO SILVER-ROOM)
-      (GLOBAL TABLE)>
+      (NORTH TO SILVER-ROOM)>
 
 <OBJECT GOLD-TABLE
 	(IN GCUP-ROOM)
